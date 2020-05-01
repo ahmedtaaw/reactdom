@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        //const elem1 = <p> Hello React </p>;
+        //ReactDOM.render(elem1, document.getElementById("app"));
+
+        ///
+
+        /*const elem1=<p className="className">Hello JSX</p>;
+
+        const elem2=React.createElement(
+            'p',
+            {className:'test 2'},
+            'Hello React'
+        );
+
+        ReactDOM.render(elem2,document.getElementById("app"))*/
+
+
+        const element3=<p className="ASD"><span>Hello</span><i>World</i></p>;
+
+        const element4=React.createElement(
+            'p',
+            {className:"ASD"},
+            React.createElement(
+                'span',
+                null,
+                "Hello"
+            ),
+            React.createElement(
+                'i',
+                null,
+                "world"
+            )
+        );
+
+        ReactDOM.render(element4,document.getElementById("app"))
+
+    </script>
+
+
+</body>
+</html>
