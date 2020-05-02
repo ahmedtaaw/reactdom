@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,71 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
+
 <body>
     <div id="app"></div>
 
     <script type="text/babel">
-    
-        class App extends React.Component{
+
+        class App extends React.Component {
 
             state = {
-                name : 'App Component',
+                name: 'App Component',
             }
 
-            render(){
-                return(
+            render() {
+                return (
                     <div>
                         <p>{this.state.name}</p>
+                        <Header name="Header Name" />
+                        <Main title="Main Title" />
+                        <Footer BLABLABLA="Footer Title" />
                     </div>
                 )
             }
 
         }
-        
-        ReactDOM.render(<App/>, document.getElementById("app"))
+
+        //App Components
+
+        class Header extends React.Component {
+            state = {
+                name:"Header State"
+            }
+            render() {
+                return (
+                    <header>{this.props.name} and {this.state.name}</header>
+                )
+            }
+        }
+
+        class Main extends React.Component {
+            state = {
+                name:"Main State"
+            }
+            render() {
+                return (
+                    <main>{this.props.title} and {this.state.name}</main>
+                )
+            }
+        }
+
+        class Footer extends React.Component {
+            state = {
+                name:"Footer State"
+            }
+            render() {
+                return (
+                    <footer>{this.props.BLABLABLA} and {this.state.name}</footer>
+                )
+            }
+        }
+
+        ReactDOM.render(<App />, document.getElementById("app"))
 
     </script>
 
 
 </body>
+
 </html>
