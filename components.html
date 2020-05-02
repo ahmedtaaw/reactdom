@@ -18,8 +18,36 @@
             render(){
                 return(
                     <div>
-                        <h3><i>Hello World !</i></h3>
+                        <Header />
+                        <Main />
+                        <Footer />
                     </div>
+                )
+            }
+        }
+
+        //App Components
+
+        class Header extends React.Component{
+            render(){
+                return(
+                    <header>App Header</header>
+                )
+            }
+        }
+
+        class Main extends React.Component{
+            render(){
+                return(
+                    <main>App Main</main>
+                )
+            }
+        }
+        
+        class Footer extends React.Component{
+            render(){
+                return(
+                    <footer>App Footer</footer>
                 )
             }
         }
