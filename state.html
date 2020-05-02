@@ -26,7 +26,7 @@
                     <div>
                         <p>{this.state.name}</p>
                         <Header name="Header Name" />
-                        <Main title="Main Title" />
+                        <Main title="Main Title" currentState={this.state.name} />
                         <Footer BLABLABLA="Footer Title" />
                     </div>
                 )
@@ -53,7 +53,7 @@
             }
             render() {
                 return (
-                    <main>{this.props.title} and {this.state.name}</main>
+                    <main>{this.props.title} and {this.state.name} and {this.props.currentState}</main>
                 )
             }
         }
