@@ -18,9 +18,9 @@
             render(){
                 return(
                     <div>
-                        <Header />
-                        <Main />
-                        <Footer />
+                        <Header name="Header Name" />
+                        <Main title="Main Title"/>
+                        <Footer BLABLABLA="Footer Title" />
                     </div>
                 )
             }
@@ -31,7 +31,7 @@
         class Header extends React.Component{
             render(){
                 return(
-                    <header>App Header</header>
+                    <header>{this.props.name}</header>
                 )
             }
         }
@@ -39,7 +39,7 @@
         class Main extends React.Component{
             render(){
                 return(
-                    <main>App Main</main>
+                    <main>{this.props.title}</main>
                 )
             }
         }
@@ -47,7 +47,7 @@
         class Footer extends React.Component{
             render(){
                 return(
-                    <footer>App Footer</footer>
+                    <footer>{this.props.BLABLABLA}</footer>
                 )
             }
         }
