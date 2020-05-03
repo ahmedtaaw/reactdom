@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { num1 as x, num2 as y, multiple } from './module';
+import { num1 as x, num2 as y, multiple, default as Testing } from './module';
 
 function App() {
   return (
@@ -11,6 +11,9 @@ function App() {
       </h1>
       <h1>
         the multiply of {x} and {y} is {multiple()}
+      </h1>
+      <h1>
+        Random Number is: {Testing()}
       </h1>
     </div>
   );
