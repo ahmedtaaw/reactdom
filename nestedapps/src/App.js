@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 import Child from './child';
 
 class App extends Component {
+    state={
+        name:"hamza"
+    }
     handleClick(){
-        console.log("clicked")
+        console.log(this.state.name)
     }
     handleMouse(){
         console.log("mouse")
@@ -14,7 +17,7 @@ class App extends Component {
         <div className = "App" >
             <Child / >
 
-            <button onClick={this.handleClick}>handle click</button>
+            <button onClick={this.handleClick.bind(this)}>handle click</button>
             <button onMouseMove={this.handleMouse}>MouseMove</button>
         </div>
         )
