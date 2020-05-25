@@ -6,7 +6,7 @@ class App extends Component {
     state={
         name:"hamza"
     }
-    handleClick(){
+    handleClick = () => {
         console.log(this.state.name)
     }
     handleMouse(){
@@ -17,7 +17,7 @@ class App extends Component {
         <div className = "App" >
             <Child / >
 
-            <button onClick={this.handleClick.bind(this)}>handle click</button>
+            <button onClick={this.handleClick}>handle click</button>
             <button onMouseMove={this.handleMouse}>MouseMove</button>
         </div>
         )
