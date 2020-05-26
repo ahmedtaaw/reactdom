@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Child from './child';
 
+import ChildStateless from './child-stateless';
+
 class App extends Component {
     state={
         name:"hamza",
@@ -33,6 +35,10 @@ class App extends Component {
             <p></p>
             <p style={{color:this.state.color}}>state is: name {this.state.name} and age is {this.state.age}</p>
             <button onClick={this.changeStage}>change state</button>
+
+            <div>
+            <ChildStateless/>
+            </div>
 
         </div>
         )
