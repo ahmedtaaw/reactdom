@@ -7,7 +7,7 @@ class Items extends Component {
 
         const theItems= items.map((item)=>{
             return(
-            <tr>
+            <tr key={item.id}>
                     <td>
                      {item.id}
                     </td>
@@ -22,7 +22,9 @@ class Items extends Component {
         })
         return(
             <table>
-                {theItems}
+                <tbody>
+                 {theItems}
+                </tbody>
             </table>
             
         )
