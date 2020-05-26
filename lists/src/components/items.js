@@ -3,21 +3,26 @@ import React, {Component} from 'react';
 class Items extends Component {
     render(props){
 
-        const {id, name, age} = this.props;
+        const {items} = this.props;
 
-        return(
-            <table>
-                <tr>
+        const theItems= items.map((item)=>{
+            return(
+            <tr>
                     <td>
-                     {id}
+                     {item.id}
                     </td>
                     <td>
-                     {name}
+                     {item.name}
                     </td>
                     <td>
-                     {age}
+                     {item.age}
                     </td>
                 </tr>
+                )
+        })
+        return(
+            <table>
+                {theItems}
             </table>
             
         )
