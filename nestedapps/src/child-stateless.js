@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 //it's better to use function based than class based in stateless component
-const ChildStateless = ()=>{
+const ChildStateless = (props)=>{
     
         return(
             <p>
-                Stateless Component
+                Stateless Component and data passed is {props.test}
             </p>
         )
     

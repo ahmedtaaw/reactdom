@@ -37,7 +37,7 @@ class App extends Component {
             <button onClick={this.changeStage}>change state</button>
 
             <div>
-            <ChildStateless/>
+            <ChildStateless test={this.state.name}/>
             </div>
 
         </div>
