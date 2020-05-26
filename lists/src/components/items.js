@@ -2,17 +2,20 @@ import React, {Component} from 'react';
 
 class Items extends Component {
     render(props){
+
+        const {id, name, age} = this.props;
+
         return(
             <table>
                 <tr>
                     <td>
-                     {this.props.id}
+                     {id}
                     </td>
                     <td>
-                     {this.props.name}
+                     {name}
                     </td>
                     <td>
-                     {this.props.age}
+                     {age}
                     </td>
                 </tr>
             </table>
