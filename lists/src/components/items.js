@@ -7,7 +7,7 @@ class Items extends Component {
 
         const theItems= items.map((item)=>{
             return(
-            <tr key={item.id}>
+            <tr key={Math.random()*100}>
                     <td>
                      {item.id}
                     </td>
