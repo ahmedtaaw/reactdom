@@ -8,10 +8,10 @@ class App extends Component {
       {id:2, name:"amohahmed", age:"22" },
       {id:3, name:"aya", age:"42" },
       {id:4, name:"mona", age:"12" },
-      {id:5, name:"ahmed", age:"33" },
-      {id:6, name:"amohahmed", age:"22" },
-      {id:7, name:"aya", age:"42" },
-      {id:8, name:"mona", age:"12" }
+      {id:5, name:"monira", age:"33" },
+      {id:6, name:"shafik", age:"22" },
+      {id:7, name:"tawfik", age:"79" },
+      {id:8, name:"ema", age:"12" }
     ]
   }
   render() {

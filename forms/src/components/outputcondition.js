@@ -1,31 +1,33 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class Outputcondition extends Component{
-    render(){
-        const {items}=this.props;
-        
-        const theItems=items.map((item)=>{
-            return(
-                <tr key={Math.random()*100}>
-                <td>
-                 {item.id}
-                </td>
-                <td>
-                 {item.name}
-                </td>
-                <td>
-                 {item.age}
-                </td>
-            </tr>
-            )
+class Outputcondition extends Component {
+    render() {
+        const { items } = this.props;
+
+        const theItems = items.map((item) => {
+            if (parseInt(item.age) < 30) {
+                return (
+                    <tr key={Math.random() * 100}>
+                        <td> 
+                            {item.id}
+                        </td>
+                        <td>
+                            {item.name}
+                        </td>
+                        <td>
+                            {item.age}
+                        </td>
+                    </tr>
+                )
+            } 
         })
 
-        return(
+        return (
             <table>
                 <tbody>
                     {theItems}
-                    </tbody>
-                    </table>
+                </tbody>
+            </table>
         )
     }
 }
