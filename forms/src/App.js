@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 //import Formsapp from './components/forms';
-import Outputcondition from './components/outputcondition'
+import Outputcondition from './components/outputcondition';
+
+import "./components/components.css"
+
 class App extends Component {
   state={
     items:[
