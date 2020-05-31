@@ -5,21 +5,25 @@ class Outputcondition extends Component {
         const { items } = this.props;
 
         const theItems = items.map((item) => {
-            if (parseInt(item.age) < 30) {
-                return (
-                    <tr key={Math.random() * 100}>
-                        <td> 
-                            {item.id}
-                        </td>
-                        <td>
-                            {item.name}
-                        </td>
-                        <td>
-                            {item.age}
-                        </td>
-                    </tr>
-                )
-            } 
+            return parseInt(item.age) < 30 ? (
+                <tr key={Math.random() * 100}>
+                <td> 
+                    {item.id}
+                </td>
+                <td>
+                    {item.name}
+                </td>
+                <td>
+                    {item.age}
+                </td>
+            </tr>
+            ):(
+<tr>
+    <td colSpan="3">no result</td>
+</tr>
+            )
+            
+
         })
 
         return (
