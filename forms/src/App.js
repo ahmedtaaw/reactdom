@@ -5,6 +5,45 @@ import Outputcondition from './components/outputcondition';
 import "./components/components.css"
 
 class App extends Component {
+
+  /*component life cycle
+  1-constructor
+  2-render
+  3-componentDidMount
+  4-componentDidUpdate
+  */
+
+  constructor (){
+    super();
+    console.log("constructor")
+  }
+
+  componentDidMount(){
+    console.log("componentDidMount every thing has been rendered")
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    console.log("componentDidUpdate")
+    console.log("prevProps",prevProps)
+    console.log("prevState",prevState)
+  }
+
+  handleADD = (e)=>{
+    let items = this.state.items;
+    items.push(  {id:9, name:"sawsan", age:"132" })
+    this.setState({
+      items:items
+    })
+  }
+
+  handleDelete = (e)=>{
+    let items = this.state.items;
+    items.pop()
+    this.setState({
+      items:items
+    })
+  }
+
   state={
     items:[
       {id:1, name:"ahmed", age:"33" },
@@ -18,9 +57,13 @@ class App extends Component {
     ]
   }
   render() {
+    console.log("render")
     return (
       <div className="App">
+
         <Outputcondition items={this.state.items}/>
+        <button onClick={this.handleADD}>ADD</button>
+        <button onClick={this.handleDelete}>Delete</button>
       </div>
     )
   }

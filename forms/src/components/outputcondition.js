@@ -5,7 +5,7 @@ class Outputcondition extends Component {
         const { items } = this.props;
 
         const theItems = items.map((item) => {
-            return parseInt(item.age) < 30 ? (
+            return parseInt(item.age) > 0 ? (
                 <tr key={Math.random() * 100}>
                 <td> 
                     {item.id}
