@@ -7,6 +7,7 @@ import "./components/components.css"
 import Nav from './components/Nav'
 import Home from './components/Home';
 import About from './components/About';
+import JsonBlog from './components/JsonBlog';
  
 import { BrowserRouter, Route} from 'react-router-dom';
 
@@ -68,12 +69,17 @@ class App extends Component {
       <BrowserRouter>
       <div className="App">
         <Nav/>
+        <Route exact path="/" component = {Home}/>
+        <Route path="/about" component = {About}/>
+        <Route path="/json" component = {JsonBlog}/>
+
+<hr></hr>
+
         <Outputcondition items={this.state.items}/>
         <button onClick={this.handleADD}>ADD</button>
         <button onClick={this.handleDelete}>Delete</button>
 
-        <Route exact path="/" component = {Home}/>
-        <Route path="/about" component = {About}/>
+        
       </div>
       </BrowserRouter>
     )

@@ -7,8 +7,9 @@ const Nav = () =>{
         <div>
             <a href='#'>Logo</a>
             <ul>
-                <NavLink activeClassName='selected' exact to="/">Home</NavLink>
+                <NavLink  exact to="/">Home</NavLink>
                 <NavLink activeClassName='selected' to="/about">About</NavLink>
+                <NavLink  to="/json">Json</NavLink>
             </ul>
         </div>
     )
