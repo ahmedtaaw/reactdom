@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 //import Formsapp from './components/forms';
-import Outputcondition from './components/outputcondition';
+import Outputcondition from './components/Outputcondition';
 
 import "./components/components.css"
+
+import Nav from './components/Nav'
+import Home from './components/Home';
+import About from './components/About';
+ 
+import { BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
 
@@ -59,12 +65,17 @@ class App extends Component {
   render() {
     console.log("render")
     return (
+      <BrowserRouter>
       <div className="App">
-
+        <Nav/>
         <Outputcondition items={this.state.items}/>
         <button onClick={this.handleADD}>ADD</button>
         <button onClick={this.handleDelete}>Delete</button>
+
+        <Route exact path="/" component = {Home}/>
+        <Route path="/about" component = {About}/>
       </div>
+      </BrowserRouter>
     )
   }
 }
