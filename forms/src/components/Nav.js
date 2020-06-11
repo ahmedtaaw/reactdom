@@ -10,6 +10,7 @@ const Nav = () =>{
                 <NavLink  exact to="/">Home</NavLink>
                 <NavLink activeClassName='selected' to="/about">About</NavLink>
                 <NavLink  to="/json">Json</NavLink>
+                <NavLink to="/OutputconditionCore">OutputconditionCore</NavLink>
             </ul>
         </div>
     )
