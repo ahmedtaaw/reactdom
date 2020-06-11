@@ -8,8 +8,9 @@ import Nav from './components/Nav'
 import Home from './components/Home';
 import About from './components/About';
 import JsonBlog from './components/JsonBlog';
+import Routex from './components/Routex';
  
-import { BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
 
@@ -22,17 +23,17 @@ class App extends Component {
 
   constructor (){
     super();
-    console.log("constructor")
+    //console.log("constructor")
   }
 
   componentDidMount(){
-    console.log("componentDidMount every thing has been rendered")
+    //console.log("componentDidMount every thing has been rendered")
   }
 
   componentDidUpdate(prevProps, prevState){
-    console.log("componentDidUpdate")
-    console.log("prevProps",prevProps)
-    console.log("prevState",prevState)
+    //console.log("componentDidUpdate")
+    //console.log("prevProps",prevProps)
+    //console.log("prevState",prevState)
   }
 
   handleADD = (e)=>{
@@ -64,14 +65,18 @@ class App extends Component {
     ]
   }
   render() {
-    console.log("render")
+    //console.log("render")
     return (
       <BrowserRouter>
       <div className="App">
         <Nav/>
-        <Route exact path="/" component = {Home}/>
-        <Route path="/about" component = {About}/>
-        <Route path="/json" component = {JsonBlog}/>
+        <Switch>
+          <Route exact path="/" component = {Home}/>
+          <Route path="/about" component = {About}/>
+          <Route path="/json" component = {JsonBlog}/>
+          <Route path="/:test_params" component={Routex}/>
+        </Switch>
+ 
 
 <hr></hr>
 
