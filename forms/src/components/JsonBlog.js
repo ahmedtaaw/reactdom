@@ -16,12 +16,20 @@ this.setState({
         })
     }
     render(){
+        const {users}=this.state;
+        const userList = users.map(user=>{
+            return(
+                <div key={user.id}>
+                    <p>Name: {user.name}, 
+                    Email: {user.email}, 
+                    which lives in: {user.address.city}</p>
+                    <hr></hr>
+                </div>
+            )
+        })
         return(
             <div>
-{this.state.users.map(user=>(
-<p>{user.name} and email is <a href={'mailto:'+user.email}>{user.email}</a></p>
-
-    ))}
+                {userList}
             </div>
         )
     }
