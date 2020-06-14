@@ -11,6 +11,7 @@ const Nav = () =>{
                 <NavLink activeClassName='selected' to="/about">About</NavLink>
                 <NavLink  to="/json">Json</NavLink>
                 <NavLink to="/OutputconditionCore">OutputconditionCore</NavLink>
+                <NavLink to="/tableFragmant">tableFragmant</NavLink>
             </ul>
         </div>
     )
